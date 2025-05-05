@@ -1,0 +1,9 @@
+pokedex
+*.exe
+*.out
+*.test
+bin/
+vendor/
+.idea/
+*.swp
+.DS_Store
