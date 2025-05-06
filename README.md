@@ -11,7 +11,7 @@ Fetch Pokémon data, simulate battles, and build your party—all from the comma
 
 ## **✨ Features**  
 ✅ **Core**  
-- Fetch Pokémon stats, types, and abilities via [PokeAPI](https://pokeapi.co).  
+- Fetch Pokémon stats, types, and abilities via <a href="https://pokeapi.co" target="_blank" rel="noopener noreferrer">PokeAPI</a>.  
 - Lightweight and fast (no dependencies beyond Go).  
 
 🔜 **Future** *(see [Roadmap](#-roadmap))*  
@@ -56,4 +56,4 @@ Pokedex > <command>
 ---
 ## **🤝 Contributing**
 
-PRs welcome! Discuss ideas in Issues
+PRs welcome! Discuss ideas in <a href="https://github.com/BurandonC/pokedexcli/issues" target="_blank" rel="noopener noreferrer">Issues</a>.
