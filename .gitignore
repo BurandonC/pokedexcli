@@ -7,3 +7,4 @@ vendor/
 .idea/
 *.swp
 .DS_Store
+repl.log
