@@ -33,6 +33,7 @@ Pokedex > <command>
 
 # Battle (coming soon!)
 ./pokedex battle <Pokemon 1> <Pokemon 2>
+```
 
 ## 🚧 Roadmap
 
