@@ -28,5 +28,13 @@ func commandCatch(cfg *config, args ...string) error {
 	fmt.Printf("%s was caught!\n", pokemon.Name)
 	fmt.Println("You may now inspect it with the inspect command.")
 	cfg.caughtPokemon[pokemon.Name] = pokemon
+
+	// Auto-save after catch
+	if err := savePokemon(cfg.caughtPokemon); err != nil {
+		fmt.Printf("Warning: Could not save Pokemon: %v\n", err)
+	} else {
+		fmt.Println("Pokedex saved!")
+	}
+
 	return nil
 }

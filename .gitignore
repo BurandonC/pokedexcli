@@ -1,4 +1,5 @@
 pokedex
+pokedexcli
 *.exe
 *.out
 *.test
