@@ -14,7 +14,14 @@ func main() {
 	savedPokemon, err := loadPokemon()
 	if err != nil {
 		fmt.Printf("Warning: Could not load saved Pokemon: %v\n", err)
-		savedPokemon = map[string]pokeapi.Pokemon{}
+		savedPokemon = map[string]CaughtPokemon{}
+	}
+
+	// Load inventory
+	savedInventory, err := loadInventory()
+	if err != nil {
+		fmt.Printf("Warning: Could not load inventory: %v\n", err)
+		savedInventory = getDefaultInventory()
 	}
 
 	// Display welcome message
@@ -25,8 +32,11 @@ func main() {
 	}
 
 	cfg := &config{
-		caughtPokemon: savedPokemon,
-		pokeapiClient: pokeClient,
+		caughtPokemon:   savedPokemon,
+		inventory:       savedInventory,
+		pokeapiClient:   pokeClient,
+		currentLocation: nil,
+		catchAttempts:   make(map[string]int),
 	}
 
 	startRepl(cfg)

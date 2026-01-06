@@ -11,10 +11,12 @@ func commandInspect(cfg *config, args ...string) error {
 	}
 
 	name := args[0]
-	pokemon, ok := cfg.caughtPokemon[name]
+	caughtPokemon, ok := cfg.caughtPokemon[name]
 	if !ok {
 		return errors.New("you have not caught that Pokemon")
 	}
+
+	pokemon := caughtPokemon.Pokemon
 
 	fmt.Println("Name:", pokemon.Name)
 	fmt.Println("Height:", pokemon.Height)
@@ -27,5 +29,13 @@ func commandInspect(cfg *config, args ...string) error {
 	for _, typeInfo := range pokemon.Types {
 		fmt.Println("  -", typeInfo.Type.Name)
 	}
+
+	// Display catch metadata
+	fmt.Println()
+	ball, _ := getPokeball(caughtPokemon.CaughtWith)
+	fmt.Printf("Caught with: %s\n", ball.DisplayName)
+	fmt.Printf("Caught on: %s\n", caughtPokemon.CaughtAt.Format("2006-01-02 15:04:05"))
+	fmt.Printf("Attempts: %d\n", caughtPokemon.Attempts)
+
 	return nil
 }

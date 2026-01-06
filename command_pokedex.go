@@ -6,8 +6,8 @@ import (
 
 func commandPokedex(cfg *config, args ...string) error {
 	fmt.Println("Your Pokedex:")
-	for _, p := range cfg.caughtPokemon {
-		fmt.Printf(" - %s\n", p.Name)
+	for _, caughtPokemon := range cfg.caughtPokemon {
+		fmt.Printf(" - %s\n", caughtPokemon.Pokemon.Name)
 	}
 	return nil
 }
