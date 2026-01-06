@@ -51,7 +51,7 @@ Pokedex > <command>
 - 🔴 🔴 **Pokéballs**: Different catch rates (Pokéball vs. Ultra Ball).
 
 ### Persistence
-- 🔴 💾 **Save Progress**: Store your Pokédex and party on disk.
+- 🟢 💾 **Save Progress**: Store your Pokédex and party on disk.
 
 ---
 ## **🤝 Contributing**
